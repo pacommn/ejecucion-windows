@@ -3,7 +3,7 @@ docker pull mysql:latest
 docker pull pacomn/party-web:1.0
 
 # Ejecutar el primer contenedor
-docker run -d --name db -p 3306:3306 -e MYSQL_DATABASE=prueba -e MYSQL_ROOT_PASSWORD=hola -v ${PWD}\sql:/var/lib mysql:latest
+docker run -d --name db -p 3306:3306 -e MYSQL_DATABASE=prueba -e MYSQL_ROOT_PASSWORD=hola -e LANG=C.UTF-8 -v ${PWD}\sql:/var/lib mysql:latest
 
 # Esperar a que el contenedor 'db' esté disponible
 while (!(docker exec db mysqladmin ping --silent)) {
