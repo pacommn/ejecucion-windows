@@ -27,5 +27,5 @@ while ($LASTEXITCODE -ne 0) {
 Start-Sleep -Seconds 20
 
 # Ejecutar el segundo contenedor
-docker run --name party-web -p 8080:8080 --link db pacomn/party-web:1.0
+docker run --name party-web -p 8040:8040 --link db pacomn/party-web:1.0
 
